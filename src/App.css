@@ -1,0 +1,271 @@
+:root {
+  --black: #151515;
+  --grey: #202020;
+  --yellow: rgb(187, 255, 0);
+  --white: #ffffff;
+  --16px: 1rem;
+  --14px: 0.875rem;
+  --12px: 0.75rem;
+  --50px: 3.125rem;
+  --60px: 3.75rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--black);
+}
+.calc-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  background-color: var(--black);
+}
+
+.answer-equal {
+  color: var(--yellow);
+  margin-bottom: 10px;
+  font-size: var(--50px);
+}
+
+.answer-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 150px;
+}
+
+.answer {
+  color: var(--white);
+  font-size: var(--60px);
+}
+
+.btn-calc-con {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 2px;
+}
+
+.equation-con {
+  background-color: var(--grey);
+}
+
+.equation {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  font-size: 25px;
+  height: 30px;
+  color: var(--white);
+  width: 100%;
+}
+
+#equal-sign {
+  grid-column: 3/5;
+  width: 100%;
+}
+
+.non-number {
+  background-color: var(--yellow);
+  color: var(--grey);
+}
+
+.number {
+  background-color: var(--grey);
+  color: var(--yellow);
+}
+
+button {
+  font-size: 25px;
+  font-weight: bold;
+  height: 80px;
+  width: 80px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.row {
+  display: flex;
+}
+
+@media only screen and (max-width: 320px) {
+  button {
+    height: 60px;
+    font-size: 19px;
+    border-radius: 3px;
+  }
+
+  .calc-container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: auto;
+    top: 20%;
+    transform: translate(0, 0);
+    border-radius: 0;
+  }
+
+  .answer-con {
+    height: var(--60px);
+  }
+
+  .answer {
+    font-size: 35px;
+  }
+
+  .equation-con {
+    display: flex;
+    align-items: center;
+    height: 40px;
+  }
+
+  .btn-calc-con {
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 500px) {
+  button {
+    width: 100%;
+    border-radius: 3px;
+  }
+
+  .calc-container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: auto;
+    top: 15%;
+    transform: translate(0, 0);
+    border-radius: 0;
+  }
+
+  .answer-con {
+    height: 60px;
+  }
+
+  .answer {
+    font-size: 35px;
+  }
+
+  .equation-con {
+    height: 40px;
+  }
+
+  .btn-calc-con {
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 650px) {
+  button {
+    width: 100%;
+    border-radius: 3px;
+  }
+
+  .calc-container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: auto;
+    top: 15%;
+    transform: translate(0, 0);
+    border-radius: 0;
+  }
+
+  .answer-con {
+    height: 60px;
+    margin: auto;
+    width: 70%;
+  }
+
+  .equation-con {
+    height: 40px;
+    width: 70%;
+    margin: auto;
+  }
+
+  .btn-calc-con {
+    width: 70%;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 651px) and (max-width: 800px) {
+  button {
+    width: 100%;
+    border-radius: 3px;
+  }
+
+  .calc-container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: auto;
+    top: 15%;
+    transform: translate(0, 0);
+    border-radius: 0;
+  }
+
+  .answer-con {
+    height: 60px;
+    margin: auto;
+    width: 55%;
+  }
+
+  .equation-con {
+    height: 40px;
+    width: 55%;
+    margin: auto;
+  }
+
+  .btn-calc-con {
+    width: 55%;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1000px) {
+  button {
+    width: 100%;
+    border-radius: 3px;
+  }
+
+  .calc-container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: auto;
+    top: 15%;
+    transform: translate(0, 0);
+    border-radius: 0;
+  }
+
+  .answer-con {
+    height: 60px;
+    margin: auto;
+    width: 40%;
+  }
+
+  .equation-con {
+    height: 40px;
+    width: 40%;
+    margin: auto;
+  }
+
+  .btn-calc-con {
+    width: 40%;
+    margin: auto;
+  }
+}
